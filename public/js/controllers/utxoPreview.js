@@ -2,7 +2,7 @@
 angular.module('utxoPreviewController', [])
 
     // inject the UtxoPreview service factory into our controller
-    .controller('mainController', function($scope, $http, UtxoPreviews) {
+    .controller('utxoPreviewController', function($scope, $http, UtxoPreviews) {
         $scope.formData = {};
 
         // GET =====================================================================

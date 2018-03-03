@@ -1,7 +1,7 @@
 <!doctype html>
 
 <!-- ASSIGN OUR ANGULAR MODULE -->
-<html ng-app="btcUtxoPreview">
+<html>
 <head>
     <!-- META -->
     <meta charset="utf-8">
@@ -20,15 +20,15 @@
     <!-- SPELLS -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.min.js"></script><!-- load angular 1.2.4 -->
-    <script src="js/controllers/main.js"></script> <!-- load up our controller -->
+    <script src="js/controllers/utxoPreview.js"></script> <!-- load up our controller -->
     <script src="js/services/utxoPreviews.js"></script> <!-- load our utxoPreview service -->
     <script src="js/core.js"></script> <!-- load our main application -->
 
 
 </head>
 <!-- SET THE CONTROLLER AND GET ALL UTXOS -->
-<body ng-controller="mainController">
-    <div class="container">
+<body ng-app="btcUtxoPreview">
+    <div ng-controller="utxoPreviewController" class="container">
 
         <!-- HEADER AND UTXO COUNT -->
         <div class="jumbotron block-center">

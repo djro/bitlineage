@@ -1,0 +1,35 @@
+
+        <!-- HEADER AND UTXO COUNT -->
+        <div class="jumbotron block-center">
+            <h1>UtxoPreview Page<span class="label label-info">{{ utxoPreviews.length }}</span></h1>
+        </div>
+
+        <!-- UTXO LIST -->
+        <div id="utxoPreview-list" class="row">
+            <div class="col-sm-4 col-sm-offset-4">
+
+                <!-- LOOP OVER THE UTXOS IN $scope.utxoPreviews -->
+                <div class="checkbox" ng-repeat="utxoPreview in utxoPreviews">
+                    <label>
+                        <input type="checkbox" ng-click="deleteUtxoPreview(utxoPreview._id)"> {{ utxoPreview.text }}
+                    </label>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- FORM TO CREATE UTXOS -->
+        <div id="utxoPreview-form" class="row">
+            <div class="col-sm-8 col-sm-offset-2 address-center">
+                <form>
+                    <div class="form-group">
+
+                        <!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
+                        <input type="number" class="form-control input-lg text-center" placeholder="enter block #" ng-model="formData.block">
+                    </div>
+
+                    <!-- createToDo() WILL CREATE NEW UTXOS -->
+                    <button type="submit" class="btn btn-primary btn-lg" ng-click="createUtxoPreview()">Add</button>
+                </form>
+            </div>
+        </div>
