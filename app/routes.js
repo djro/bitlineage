@@ -23,20 +23,23 @@ module.exports = function(app) {
     // create utxoPreview and send back all utxoPreviews after creation
     app.post('/api/utxoPreviews', function(req, res) {
 
-        // create a utxoPreview, information comes from AJAX request from Angular
-        // UtxoPreview.create({
-        //     block : req.body.block
-        // }, function(err, utxoPreview) {
-        //     if (err)
-        //         res.send(err);
+        //create a utxoPreview, information comes from AJAX request from Angular
+        UtxoPreview.create({
+            address: req.body.address,
+            parrentAddress: req.body.parrentAddress,
+            block : req.body.block,
+            amount: req.body.number 
+        }, function(err, utxoPreview) {
+            if (err)
+                res.send(err);
 
-        //     // get and return all the utxoPreviews after you create another
-        //     UtxoPreview.find(function(err, utxoPreviews) {
-        //         if (err)
-        //             res.send(err)
-        //         res.json(utxoPreviews);
-        //     });
-        // });
+            // get and return all the utxoPreviews after you create another
+            UtxoPreview.find(function(err, utxoPreviews) {
+                if (err)
+                    res.send(err)
+                res.json(utxoPreviews);
+            });
+        });
 
     });
 
@@ -56,5 +59,8 @@ module.exports = function(app) {
             });
         });
     });
+
+    //outside api
+    app.get('/api/block')
 
 }
