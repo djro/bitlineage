@@ -1,5 +1,5 @@
-// angular.module('blockUtxosController', [])
+angular.module('blockUtxosController', [])
 
-// .controller('blockUtxosController', function($scope, $http, BlockHeight){
+.controller('blockUtxosController', function($scope, $http, BlockHeight){
 
-// });
+});

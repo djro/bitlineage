@@ -1,19 +1,19 @@
-var coreApp = angular.module('btcUtxoPreview', ['utxoPreviewController', 'utxoPreviewService']);
+var coreApp = angular.module('btcUtxoPreview', ['utxoPreviewController', 'utxoPreviewService', 'blockUtxosController', 'blockHeightService', 'ui.router']);
 
-// coreApp.config(function($stateProvider, $urlRouterProvider){
-//     $urlRouterProvider.otherwise('/home');
+coreApp.config(function($stateProvider, $urlRouterProvider){
+    $urlRouterProvider.otherwise('/home');
 
-//     $stateProvider
+    $stateProvider
 
-//         .state('home', {
-//             url:'/home',
-//             templateUrl: 'partial-home.html',
-//             controller: 'mainController'
-//         })
+        .state('home', {
+            url:'/home',
+            templateUrl: 'partial-home.html',
+            controller: 'utxoPreviewController'
+        })
 
-//         .state('blocks',{
-//             url:'/blocks',
-//             templateUrl: 'partial-blocks.html',
-//             controller: 'blockUtxosController'
-//         })
-// });    
+        .state('blocks',{
+            url:'/blocks',
+            templateUrl: 'partial-blocks.html',
+            controller: 'blockUtxosController'
+        })
+});    
