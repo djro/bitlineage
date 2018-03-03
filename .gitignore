@@ -1,0 +1,5 @@
+*.orig
+*.swp
+/config/database.js
+/node_modules
+/.vscode

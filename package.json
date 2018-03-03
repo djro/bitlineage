@@ -1,0 +1,14 @@
+{
+  "name": "node-utxo-preview",
+  "version": "0.0.0",
+  "description": "Simple utxoPreview application.",
+  "main": "server.js",
+  "author": "djro",
+  "dependencies": {
+    "express": "~4.7.2",
+    "mongoose": "~5.0.6",
+    "morgan": "~1.2.2",
+    "body-parser": "~1.5.2",
+    "method-override": "~2.1.2"
+  }
+}
