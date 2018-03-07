@@ -5,7 +5,7 @@ app.factory('BlockHeight', function($http){
         get: function (blocknum){
             return $http({
                 method: "GET",
-                url: 'https://todo/api/v2/etc',
+                url: 'https://chain.so/api/v2/get_blockhash/btc/' + blocknum,
                 headers: {
                     'Content-Type': 'application/json; charset=utf-8'
         }
