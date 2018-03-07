@@ -14,6 +14,6 @@ coreApp.config(function($stateProvider, $urlRouterProvider){
         .state('blocks',{
             url:'/blocks',
             templateUrl: 'partial-blocks.html',
-            controller: 'blockUtxosController'
+            controller: 'blockUtxosController as vm'
         })
 });    
