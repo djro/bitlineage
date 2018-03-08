@@ -5,7 +5,7 @@ angular.module('blockUtxosController', [])
         vm = this;
         BlockHeight.get(blockNum)
         .then(function(data) {
-            
+
             vm.blockHash = data.data.blockhash || data.data.data.blockhash;
             $scope.$apply();
 
