@@ -8,9 +8,8 @@ app.factory('BlockHeight', function($http){
                 url: 'https://chain.so/api/v2/get_blockhash/btc/' + blocknum,
                 headers: {
                     'Content-Type': 'application/json; charset=utf-8'
-        }
-    }
-            )
+                }
+            })
         }
     }
 });
