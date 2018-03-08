@@ -1,8 +1,4 @@
-// js/services/utxoPreviews.js
 angular.module('utxoPreviewService', [])
-
-    // super simple service
-    // each function returns a promise object 
     .factory('UtxoPreviews', function($http) {
         return {
             get : function() {
