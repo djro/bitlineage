@@ -1,6 +1,7 @@
 // load models
 var UtxoPreview = require('./models/utxoPreview');
-var BlockSearchHistory = require('./models/blockSearchHistory')
+var BlockSearchHistory = require('./models/blockSearchHistory');
+var Client = require('node-rest-client').Client;
 // expose the routes to our express.app with module.exports
 module.exports = function(app) {
     // api ---------------------------------------------------------------------
@@ -99,4 +100,24 @@ module.exports = function(app) {
         });
     });
     //---------end block search---------------------------
+
+    //---------blockchaininfo webpi ----------------------
+        //get
+        app.get('/api/blockchaininfo/:hash', function(req, res) {
+
+            var client = new Client();
+            var args = {
+                path: { hash: req.params.hash }, // path substitution var  
+                headers: { 'Content-Type': 'application/json; charset=utf-8' } // request headers 
+            };
+
+            client.get("https://blockchain.info/rawblock/${hash}", args,
+            function (data, response) {
+
+                console.log(data);
+                res.json(data); 
+            });
+        });
+    //---------end blockchaininfo webpi ----------------------
+    
 }
