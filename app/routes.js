@@ -103,7 +103,7 @@ module.exports = function(app) {
 
     //---------blockchaininfo webpi ----------------------
         //get block by hash
-        app.get('/api/blockchaininfo/:hash', function(req, res) {
+        app.get('/api/blockchaininfo/rawblock/:hash', function(req, res) {
 
             var client = new Client();
             var args = {
