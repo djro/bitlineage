@@ -1,6 +1,6 @@
                 <!-- HEADER AND something descriptive -->
                 <div class="jumbotron block-center">
-                        <h1>Get Block <span class="label label-info"> something descriptive here</span></h1>
+                        <h1>Block Hash <span ng-bind="vm.blockHash || 'search by block #'" class="label label-info"> </span></h1>
                     </div>
                     <!-- FORM TO Get Blocks-->
                     <div id="utxoPreview-form" class="row">
@@ -9,12 +9,12 @@
                                 <div class="form-group">
             
                                     <!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
-                                    <label for="blockInput">Block Number: </label>
+                                    <label for="blockInput">Enter block number </label>
                                     <input id="blockInput" type="number" class="form-control input-lg text-center" placeholder="enter block #" ng-model="vm.blockNum">
                                 </div>
             
                                 <!-- createToDo() WILL CREATE NEW UTXOS -->
-                                <button type="submit" class="btn btn-primary btn-lg" ng-click="vm.getBlockFromNumber(vm.blockNum)">Get UTXO's in block</button>
+                                <button type="submit" class="btn btn-primary btn-lg" ng-click="vm.getBlockFromNumber(vm.blockNum)">Get hash</button>
                             </form>
                         </div>
                     </div>
