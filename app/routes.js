@@ -102,7 +102,7 @@ module.exports = function(app) {
     //---------end block search---------------------------
 
     //---------blockchaininfo webpi ----------------------
-        //get
+        //get block by hash
         app.get('/api/blockchaininfo/:hash', function(req, res) {
 
             var client = new Client();
@@ -112,6 +112,22 @@ module.exports = function(app) {
             };
 
             client.get("https://blockchain.info/rawblock/${hash}", args,
+            function (data, response) {
+
+                console.log(data);
+                res.json(data); 
+            });
+        });
+        //get address
+        app.get('/api/blockchaininfo/rawaddr/:addr', function(req, res) {
+
+            var client = new Client();
+            var args = {
+                path: { addr: req.params.addr }, // path substitution var  
+                headers: { 'Content-Type': 'application/json; charset=utf-8' } // request headers 
+            };
+
+            client.get("https://blockchain.info/rawaddr/${addr}", args,
             function (data, response) {
 
                 console.log(data);
