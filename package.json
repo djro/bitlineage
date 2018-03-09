@@ -1,7 +1,7 @@
 {
-  "name": "node-utxo-preview",
-  "version": "0.0.0",
-  "description": "Simple utxoPreview application.",
+  "name": "bitlineage",
+  "version": "0.0.1",
+  "description": "Simple application to trace bitcoin transaction lineage",
   "main": "server.js",
   "author": "djro",
   "dependencies": {
