@@ -3,22 +3,25 @@
         <div class="jumbotron block-center">
             <h1>Utxo Preview List<span class="label label-info">{{ utxoPreviews.length }}</span></h1>
         </div>
-
         <!-- UTXO LIST -->
         <div id="utxoPreview-list" class="row">
             <div class="col-sm-4 col-sm-offset-4">
-
                 <!-- LOOP OVER THE UTXOS IN $scope.utxoPreviews -->
                 <div class="checkbox" ng-repeat="utxoPreview in utxoPreviews">
                     <label>
-                        <input type="checkbox" ng-click="deleteUtxoPreview(utxoPreview._id)"> {{ utxoPreview.text }}
+                        <input type="checkbox" ng-click="deleteUtxoPreview(utxoPreview._id)"> {{ utxoPreview.address }}
                     </label>
                 </div>
-
             </div>
         </div>
-
-        <!-- FORM TO CREATE UTXOS -->
-        <div id="utxoPreview-form" class="row">
-<p>display in grid or list here</p> 
+        <div id="todo-utxoPreview" class="row">
+            <div class="col-sm-8 col-sm-offset-2 text-center">
+                    <!-- <p>display in grid or list here</p>  -->
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control input-lg text-center" placeholder="I want to buy a puppy that will love me forever" ng-model="formData.address">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg" ng-click="createUtxoPreview()">Add</button>
+                </form>
+            </div>
         </div>

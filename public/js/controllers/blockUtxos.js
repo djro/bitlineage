@@ -6,26 +6,19 @@ angular.module('blockUtxosController', [])
         BlockHeight.get(blockNum)
         .then(function(data) {
 
-            vm.blockHash = data.data.blockhash || data.data.data.blockhash;
+            vm.blockHash = data.data.blockhash;
             $scope.$apply();
 
             BlockSearchHistory.create(blockNum, vm.blockHash, new Date())
-            .then(function(result){
+            .then(function(data){
                
-            },function(err){
-
             });
 
             BlockChainInfo.getBlockByHash(vm.blockHash)
-            .then(function(result){
-                vm.blockInfo = result.data;
-            },function(err){
-                var ex = error;
+            .then(function(data){
+                vm.blockInfo = data;
             });
             
-        },
-        function(error){
-            var ex = error;
         });
     }
 });
