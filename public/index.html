@@ -1,26 +1,17 @@
 <!doctype html>
-
-<!-- ASSIGN OUR ANGULAR MODULE -->
 <html>
 <head>
     <!-- META -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
-
-    <title>Eye-blox</title>
-
-    <!-- SCROLLS -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
-    <style>
-        html                    { overflow-y:scroll; }
-        body                    { padding-top:50px; }
-        #utxoPreview-list              { margin-bottom:30px; }
-    </style>
-
-    <!-- SPELLS -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.min.js"></script><!-- load angular 1.2.4 -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+    <title>Bit Lineage</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <!-- js -->
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> -->
+    <script src="js/libs/angular.min.js"></script><!-- //ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.min.js -->
+    <script src="js/libs/angular-ui-router.min.js"></script><!-- //cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js -->
     <!-- load controllers -->
     <script src="js/controllers/utxoPreview.js"></script> 
     <script src="js/controllers/blockUtxos.js"></script>
@@ -31,28 +22,22 @@
     <script src="js/services/blockchaininfo.js"></script>
     <!-- load app entry/start-->
     <script src="js/core.js"></script> <!-- load our main application -->
-
-
 </head>
-<!-- SET THE CONTROLLER AND GET ALL UTXOS -->
 <body ng-app="btcUtxoPreview">
 <!-- NAVIGATION -->
 <nav class="navbar navbar-inverse" role="navigation">
         <div class="navbar-header">
-            <a class="navbar-brand" ui-sref="#">The All Seeing Block Scraper</a>
+            <a class="navbar-brand" ui-sref="#">Bitcoin transcation lineage</a>
         </div>
         <ul class="nav navbar-nav">
             <li><a ui-sref="home">Home</a></li>
             <li><a ui-sref="blocks">Blocks</a></li>
         </ul>
     </nav>
-
 <!-- MAIN CONTENT -->
 <div class="container">
-
-        <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
+    <!-- ui-router views displayed here -->
         <div ui-view></div>
-    
     </div>
 </body>
 </html>
