@@ -1,4 +1,4 @@
-var coreApp = angular.module('btcUtxoPreview', ['utxoPreviewController', 'utxoPreviewService', 'blockUtxosController', 'blockHeightService', 'blockSearchHistoryService', 'blockchaininfoService','ui.router']);
+var coreApp = angular.module('btcUtxoPreview', ['utxoPreviewController', 'utxoPreviewService', 'blockUtxosController', 'blockHeightService', 'blockSearchHistoryService', 'blockchaininfoService', 'collapsibleTreeDirective','ui.router']);
 
 coreApp.config(function($stateProvider, $urlRouterProvider){
     $urlRouterProvider.otherwise('/home');
