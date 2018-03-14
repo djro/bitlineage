@@ -10,22 +10,26 @@
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/collapsible-tree.css">
     <!-- js -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> <!-- added jquery soley to fix this: https://stackoverflow.com/a/18220411 -->
-    <script src="js/libs/angular.min.js"></script><!-- //ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.min.js -->
-    <script src="js/libs/angular-ui-router.min.js"></script><!-- //cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js -->
+     <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> added jquery soley to fix this: https://stackoverflow.com/a/18220411 -->
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script> -->
+    <script src="js/libs/angular.min.js"></script>
+    <script src="js/libs/angular-ui-router.min.js"></script>
     <script src="js/libs/d3.v3.min.js"></script>
     <script src="js/libs/collapsible-tree.js"></script>
     
     <!-- load controllers -->
     <script src="js/controllers/utxoPreview.js"></script> 
     <script src="js/controllers/blockUtxos.js"></script>
+    <script src="js/controllers/treemap.js"></script>
     <!-- load services -->
     <script src="js/services/utxoPreviews.js"></script> 
     <script src="js/services/blockHeight.js"></script>
     <script src="js/services/blockSearchHistory.js"></script>
     <script src="js/services/blockchaininfo.js"></script>
     <!-- load directives -->
-    <script src="js/directives/collapsibleTree.js"></script>    
+    <script src="js/directives/collapsibleTree.js"></script>   
+    <script src="js/directives/treemap.js"></script>         
     <!-- load app entry/start-->
     <script src="js/core.js"></script> <!-- load our main application -->
 </head>
@@ -38,6 +42,7 @@
         <ul class="nav navbar-nav">
             <li><a ui-sref="home">Home</a></li>
             <li><a ui-sref="blocks">Blocks</a></li>
+            <li><a ui-sref="blocktreemap">Tree Map</a></li>
         </ul>
     </nav>
 <!-- MAIN CONTENT -->
