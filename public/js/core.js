@@ -1,4 +1,4 @@
-var coreApp = angular.module('btcUtxoPreview', ['utxoPreviewController', 'utxoPreviewService', 'blockUtxosController', 'blockHeightService', 'blockSearchHistoryService', 'blockchaininfoService','ui.router']);
+var coreApp = angular.module('btcUtxoPreview', ['transactionLineageController', 'utxoPreviewController', 'utxoPreviewService', 'blockUtxosController', 'blockHeightService', 'blockSearchHistoryService', 'blockchaininfoService','ui.router']);
 
 coreApp.config(function($stateProvider, $urlRouterProvider){
     $urlRouterProvider.otherwise('/home');
@@ -7,8 +7,8 @@ coreApp.config(function($stateProvider, $urlRouterProvider){
 
         .state('home', {
             url:'/home',
-            templateUrl: 'partial-home.html',
-            controller: 'utxoPreviewController'
+            templateUrl: 'partial-transaction-view.html',
+            controller: 'transactionLineageController as vm'
         })
 
         .state('blocks',{

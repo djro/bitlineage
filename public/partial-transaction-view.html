@@ -1,0 +1,15 @@
+
+        <div class="jumbotron block-center">
+            <h1>View Tranasctions<span class="label label-info">insert relevant data here</span></h1>
+        </div>
+        <div id="transaction-form" class="row">
+            <div class="col-sm-8 col-sm-offset-2 address-center">
+                <form>
+                    <div class="form-group">
+                        <label for="addressInput">Enter address </label>
+                        <input id="addressInput" type="text" class="form-control input-lg text-center" placeholder="address" ng-model="vm.parentAddress">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg" ng-click="vm.getRawAddress(vm.parentAddress)">Get address details</button>
+                </form>
+            </div>
+        </div>
